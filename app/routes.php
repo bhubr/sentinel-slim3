@@ -10,7 +10,7 @@ $app->add( function($request, $response, $next) use($app) {
 
 // One-time use route to create roles
 $app->get('/setup', function (Request $request, Response $response, $args) use ($app) {
-    $app->container->sentinel->getRoleRepository()->createModel()->create(array(
+    $app->getContainer()->sentinel->getRoleRepository()->createModel()->create(array(
         'name'          => 'Admin',
         'slug'          => 'admin',
         'permissions'   => array(
@@ -20,7 +20,7 @@ $app->get('/setup', function (Request $request, Response $response, $args) use (
         ),
     ));
 
-    $app->container->sentinel->getRoleRepository()->createModel()->create(array(
+    $app->getContainer()->sentinel->getRoleRepository()->createModel()->create(array(
         'name'          => 'User',
         'slug'          => 'user',
         'permissions'   => array(
