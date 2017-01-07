@@ -5,3 +5,4 @@ vendor/
 .project
 .settings/
 .vagrant/
+app/bootstrap/db_settings.php
